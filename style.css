@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans";
+}
+
+.accordion-body{
+    background-color: hsl(275, 100%, 97%);
+    height: 100vh;
+    width: 80%;
+}
+
+.img-div{
+    position: relative;
+    width: 100%;
+    height: 20%;
+}
+
+.img-div img{
+    width: 100%;
+    height: auto;
+}
+.accordion{
+    position: relative;
+    background-color: white;
+    margin: -20px auto;
+    padding: 15px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+h1{
+    margin-left: 20px;
+}
+.logo-title{
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+.accordion .label{
+    position: relative;
+}
+
+.label{
+    width: 100%;
+    color: hsl(292, 42%, 14%);
+    font-weight: bold;
+}
+
+.label:hover{
+    color: hsl(276, 67%, 50%);
+}
+
+.content{
+    position: relative;
+    color: hsl(292, 16%, 49%);
+    font-size: 15px;
+    top: 10px;
+    padding-right: 45px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    text-align: justify;
+}
+
+.label::before{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='31' fill='none' viewBox='0 0 30 31'%3E%3Cpath fill='%23AD28EB' d='M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z'/%3E%3C/svg%3E");
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.container.active .content{
+    height: 100px;
+    transition: height 0.3s ease;
+}
+
+.container.active .label::before{
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='31' fill='none' viewBox='0 0 30 31'%3E%3Cpath fill='%23301534' d='M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z'/%3E%3C/svg%3E");
+    font-size: 30px;
+}
+
+footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
